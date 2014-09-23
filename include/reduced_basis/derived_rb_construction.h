@@ -96,7 +96,7 @@ public:
   /**
    * Build a new DerivedRBEvaluation object.
    */
-  virtual AutoPtr<RBEvaluation> build_rb_evaluation(const Parallel::Communicator &comm
+  virtual UniquePtr<RBEvaluation> build_rb_evaluation(const Parallel::Communicator &comm
                                                     LIBMESH_CAN_DEFAULT_TO_COMMWORLD);
 
   /**

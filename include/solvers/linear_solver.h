@@ -75,7 +75,7 @@ public:
    * Builds a \p LinearSolver using the linear solver package specified by
    * \p solver_package
    */
-  static AutoPtr<LinearSolver<T> > build(const libMesh::Parallel::Communicator &comm_in,
+  static UniquePtr<LinearSolver<T> > build(const libMesh::Parallel::Communicator &comm_in,
                                          const SolverPackage solver_package = libMesh::default_solver_package());
 
   /**

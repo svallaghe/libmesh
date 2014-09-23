@@ -131,7 +131,7 @@ public:
    */
   dof_id_type key (const unsigned int s) const;
 
-  AutoPtr<Elem> build_side (const unsigned int i,
+  UniquePtr<Elem> build_side (const unsigned int i,
                             bool proxy) const;
 
   virtual void connectivity(const unsigned int sf,

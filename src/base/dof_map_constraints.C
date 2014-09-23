@@ -82,7 +82,7 @@ public:
     const Variable &var_description = _dof_map.variable(_variable_number);
 
 #ifdef LIBMESH_ENABLE_PERIODIC
-    AutoPtr<PointLocatorBase> point_locator;
+    UniquePtr<PointLocatorBase> point_locator;
     bool have_periodic_boundaries = !_periodic_boundaries.empty();
     if (have_periodic_boundaries)
       point_locator = _mesh.sub_point_locator();
@@ -144,7 +144,7 @@ public:
   void operator()(const ConstElemRange &range) const
   {
 #ifdef LIBMESH_ENABLE_PERIODIC
-    AutoPtr<PointLocatorBase> point_locator;
+    UniquePtr<PointLocatorBase> point_locator;
     bool have_periodic_boundaries = !_periodic_boundaries.empty();
     if (have_periodic_boundaries)
       point_locator = _mesh.sub_point_locator();
@@ -334,11 +334,11 @@ private:
       variable.first_scalar_number();
 
     // Get FE objects of the appropriate type
-    AutoPtr<FEGenericBase<OutputType> > fe = FEGenericBase<OutputType>::build(dim, fe_type);
+    UniquePtr<FEGenericBase<OutputType> > fe = FEGenericBase<OutputType>::build(dim, fe_type);
 
     // Prepare variables for projection
-    AutoPtr<QBase> qedgerule (fe_type.default_quadrature_rule(1));
-    AutoPtr<QBase> qsiderule (fe_type.default_quadrature_rule(dim-1));
+    UniquePtr<QBase> qedgerule (fe_type.default_quadrature_rule(1));
+    UniquePtr<QBase> qsiderule (fe_type.default_quadrature_rule(dim-1));
 
     // The values of the shape functions at the quadrature
     // points
@@ -382,13 +382,13 @@ private:
     // If our supplied functions require a FEMContext, and if we have
     // an initialized solution to use with that FEMContext, then
     // create one
-    AutoPtr<FEMContext> context;
+    UniquePtr<FEMContext> context;
     if (f_fem)
       {
         libmesh_assert(f_system);
         if (f_system->current_local_solution->initialized())
           {
-            context = AutoPtr<FEMContext>(new FEMContext(*f_system));
+            context = UniquePtr<FEMContext>(new FEMContext(*f_system));
             f_fem->init_context(*context);
             if (g_fem)
               g_fem->init_context(*context);
@@ -1910,7 +1910,7 @@ void DofMap::enforce_constraints_exactly (const System &system,
 
   NumericVector<Number> *v_local  = NULL; // will be initialized below
   NumericVector<Number> *v_global = NULL; // will be initialized below
-  AutoPtr<NumericVector<Number> > v_built;
+  UniquePtr<NumericVector<Number> > v_built;
   if (v->type() == SERIAL)
     {
       v_built = NumericVector<Number>::build(this->comm());
@@ -2008,7 +2008,7 @@ void DofMap::enforce_adjoint_constraints_exactly
 
   NumericVector<Number> *v_local  = NULL; // will be initialized below
   NumericVector<Number> *v_global = NULL; // will be initialized below
-  AutoPtr<NumericVector<Number> > v_built;
+  UniquePtr<NumericVector<Number> > v_built;
   if (v.type() == SERIAL)
     {
       v_built = NumericVector<Number>::build(this->comm());

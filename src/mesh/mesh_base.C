@@ -397,7 +397,7 @@ const PointLocatorBase& MeshBase::point_locator () const
 }
 
 
-AutoPtr<PointLocatorBase> MeshBase::sub_point_locator () const
+UniquePtr<PointLocatorBase> MeshBase::sub_point_locator () const
 {
   if (_point_locator.get() == NULL)
     {

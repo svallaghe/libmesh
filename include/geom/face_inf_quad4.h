@@ -115,7 +115,7 @@ public:
    * Creates and returns an \p Edge2 for the base side, and an \p InfEdge2 for
    * the sides 1, 2.
    */
-  AutoPtr<Elem> build_side (const unsigned int i,
+  UniquePtr<Elem> build_side (const unsigned int i,
                             bool proxy) const;
 
   virtual void connectivity(const unsigned int sf,

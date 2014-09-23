@@ -714,7 +714,7 @@ protected:
    * Helper function to reduce some code duplication in the *_point_* methods.
    */
   template<typename OutputShape>
-  AutoPtr<FEGenericBase<OutputShape> > build_new_fe( const FEGenericBase<OutputShape>* fe, const Point &p ) const;
+  UniquePtr<FEGenericBase<OutputShape> > build_new_fe( const FEGenericBase<OutputShape>* fe, const Point &p ) const;
 
 
   // gcc-3.4, oracle 12.3 require this typedef to be public

@@ -72,7 +72,7 @@ public:
    * Builds a \p NonlinearSolver using the nonlinear solver package specified by
    * \p solver_package
    */
-  static AutoPtr<NonlinearSolver<T> > build(sys_type& s,
+  static UniquePtr<NonlinearSolver<T> > build(sys_type& s,
                                             const SolverPackage solver_package = libMesh::default_solver_package());
 
   /**

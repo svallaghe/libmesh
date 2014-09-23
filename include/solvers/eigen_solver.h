@@ -70,7 +70,7 @@ public:
    * Builds an \p EigenSolver using the linear solver package specified by
    * \p solver_package
    */
-  static AutoPtr<EigenSolver<T> > build(const Parallel::Communicator &comm_in
+  static UniquePtr<EigenSolver<T> > build(const Parallel::Communicator &comm_in
                                         LIBMESH_CAN_DEFAULT_TO_COMMWORLD,
                                         const SolverPackage solver_package = SLEPC_SOLVERS);
 
