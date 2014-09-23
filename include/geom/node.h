@@ -99,16 +99,16 @@ public:
    * to the newly-created object.  Optionally assignes the \p id.
    */
   static UniquePtr<Node> build (const Point& p,
-                              const dof_id_type id);
+                                const dof_id_type id);
 
   /**
    * Builds a \p Node from specified points and returns an \p UniquePtr<Node>
    * to the newly-created object.  Optionally assigned the \p id.
    */
   static UniquePtr<Node> build (const Real x,
-                              const Real y,
-                              const Real z,
-                              const dof_id_type id);
+                                const Real y,
+                                const Real z,
+                                const dof_id_type id);
 
   /**
    * @returns \p true if the node is active.  An active node is
@@ -291,7 +291,7 @@ UniquePtr<Node> Node::build(const Node& n)
 
 inline
 UniquePtr<Node> Node::build(const Point& p,
-                          const dof_id_type id)
+                            const dof_id_type id)
 {
   return UniquePtr<Node>(new Node(p,id));
 }
@@ -300,9 +300,9 @@ UniquePtr<Node> Node::build(const Point& p,
 
 inline
 UniquePtr<Node> Node::build(const Real x,
-                          const Real y,
-                          const Real z,
-                          const dof_id_type id)
+                            const Real y,
+                            const Real z,
+                            const dof_id_type id)
 {
   return UniquePtr<Node>(new Node(x,y,z,id));
 }

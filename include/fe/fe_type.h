@@ -185,7 +185,7 @@ public:
    * be chosen by changing the extraorder parameter.
    */
   UniquePtr<QBase> default_quadrature_rule (const unsigned int dim,
-                                          const int extraorder=0) const;
+                                            const int extraorder=0) const;
 
 
 private:

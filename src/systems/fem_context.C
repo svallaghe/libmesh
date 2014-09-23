@@ -1699,7 +1699,7 @@ void FEMContext::_update_time_from_system(Real theta)
 
 template<typename OutputShape>
 UniquePtr<FEGenericBase<OutputShape> > FEMContext::build_new_fe( const FEGenericBase<OutputShape>* fe,
-                                                               const Point &p ) const
+                                                                 const Point &p ) const
 {
   FEType fe_type = fe->get_fe_type();
 

@@ -155,7 +155,7 @@ public:
   { libmesh_not_implemented(); return UniquePtr<Elem>(); }
 
   virtual UniquePtr<Elem> build_side (const unsigned int,
-                                    bool) const
+                                      bool) const
   { libmesh_not_implemented(); return UniquePtr<Elem>(); }
 
   virtual UniquePtr<Elem> build_edge (const unsigned int) const

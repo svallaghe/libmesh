@@ -71,8 +71,8 @@ public:
    * \p solver_package
    */
   static UniquePtr<EigenSolver<T> > build(const Parallel::Communicator &comm_in
-                                        LIBMESH_CAN_DEFAULT_TO_COMMWORLD,
-                                        const SolverPackage solver_package = SLEPC_SOLVERS);
+                                          LIBMESH_CAN_DEFAULT_TO_COMMWORLD,
+                                          const SolverPackage solver_package = SLEPC_SOLVERS);
 
   /**
    * @returns true if the data structures are

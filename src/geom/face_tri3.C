@@ -107,7 +107,7 @@ bool Tri3::is_node_on_side(const unsigned int n,
 }
 
 UniquePtr<Elem> Tri3::build_side (const unsigned int i,
-                                bool proxy) const
+                                  bool proxy) const
 {
   libmesh_assert_less (i, this->n_sides());
 

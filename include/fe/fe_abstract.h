@@ -119,7 +119,7 @@ public:
    * way the user need not remember to delete the object.
    */
   static UniquePtr<FEAbstract> build (const unsigned int dim,
-                                    const FEType& type);
+                                      const FEType& type);
 
   /**
    * This is at the core of this class. Use this for each

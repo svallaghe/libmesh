@@ -125,7 +125,7 @@ public:
    * takes care of freeing memory.
    */
   UniquePtr<Elem> build_side (const unsigned int i,
-                            bool proxy) const;
+                              bool proxy) const;
 
   /**
    * Returns a \p EDGE3 built coincident with edges 0 to 2, an \p INFEDGE2

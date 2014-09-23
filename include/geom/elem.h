@@ -547,7 +547,7 @@ public:
    * this function with proxy=false.
    */
   virtual UniquePtr<Elem> build_side (const unsigned int i,
-                                    bool proxy=true) const = 0;
+                                      bool proxy=true) const = 0;
 
   /**
    * Creates an element coincident with edge \p i. The element returned is
@@ -1128,7 +1128,7 @@ public:
    * \p UniquePtr<>
    */
   static UniquePtr<Elem> build (const ElemType type,
-                              Elem* p=NULL);
+                                Elem* p=NULL);
 
 #ifdef LIBMESH_ENABLE_AMR
 

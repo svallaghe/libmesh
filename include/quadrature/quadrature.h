@@ -86,8 +86,8 @@ public:
    * function.
    */
   static UniquePtr<QBase> build (const std::string &name,
-                               const unsigned int _dim,
-                               const Order _order=INVALID_ORDER);
+                                 const unsigned int _dim,
+                                 const Order _order=INVALID_ORDER);
 
   /**
    * Builds a specific quadrature rule, identified through the
@@ -97,8 +97,8 @@ public:
    * the quadrature rule.
    */
   static UniquePtr<QBase> build (const QuadratureType _qt,
-                               const unsigned int _dim,
-                               const Order _order=INVALID_ORDER);
+                                 const unsigned int _dim,
+                                 const Order _order=INVALID_ORDER);
 
   /**
    * @returns the current element type we're set up for

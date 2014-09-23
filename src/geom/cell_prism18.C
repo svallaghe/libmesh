@@ -175,7 +175,7 @@ dof_id_type Prism18::key (const unsigned int s) const
 
 
 UniquePtr<Elem> Prism18::build_side (const unsigned int i,
-                                   bool proxy) const
+                                     bool proxy) const
 {
   libmesh_assert_less (i, this->n_sides());
 

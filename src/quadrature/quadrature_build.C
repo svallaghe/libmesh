@@ -40,8 +40,8 @@ namespace libMesh
 
 //---------------------------------------------------------------
 UniquePtr<QBase> QBase::build (const std::string &type,
-                             const unsigned int _dim,
-                             const Order _order)
+                               const unsigned int _dim,
+                               const Order _order)
 {
   return QBase::build (Utility::string_to_enum<QuadratureType> (type),
                        _dim,
@@ -51,8 +51,8 @@ UniquePtr<QBase> QBase::build (const std::string &type,
 
 
 UniquePtr<QBase> QBase::build(const QuadratureType _qt,
-                            const unsigned int _dim,
-                            const Order _order)
+                              const unsigned int _dim,
+                              const Order _order)
 {
   switch (_qt)
     {

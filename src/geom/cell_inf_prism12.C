@@ -102,7 +102,7 @@ bool InfPrism12::is_node_on_edge(const unsigned int n,
 }
 
 UniquePtr<Elem> InfPrism12::build_side (const unsigned int i,
-                                      bool proxy) const
+                                        bool proxy) const
 {
   libmesh_assert_less (i, this->n_sides());
 

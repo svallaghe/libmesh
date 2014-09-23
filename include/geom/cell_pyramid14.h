@@ -140,7 +140,7 @@ public:
    * The \p UniquePtr<Elem> handles the memory aspect.
    */
   UniquePtr<Elem> build_side (const unsigned int i,
-                            bool proxy) const;
+                              bool proxy) const;
 
   /**
    * Builds a \p EDGE3 coincident with edge i.

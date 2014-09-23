@@ -75,8 +75,8 @@ public:
    * This way the user need not remember to delete the object.
    */
   static UniquePtr<PointLocatorBase> build (PointLocatorType t,
-                                          const MeshBase& mesh,
-                                          const PointLocatorBase* master = NULL);
+                                            const MeshBase& mesh,
+                                            const PointLocatorBase* master = NULL);
 
   /**
    * Clears the \p PointLocator.

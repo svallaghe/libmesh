@@ -203,7 +203,7 @@ dof_id_type Hex27::key (const unsigned int s) const
 
 
 UniquePtr<Elem> Hex27::build_side (const unsigned int i,
-                                 bool proxy) const
+                                   bool proxy) const
 {
   libmesh_assert_less (i, this->n_sides());
 

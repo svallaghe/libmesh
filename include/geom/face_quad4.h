@@ -115,7 +115,7 @@ public:
   Order default_order() const { return FIRST; }
 
   UniquePtr<Elem> build_side (const unsigned int i,
-                            bool proxy) const;
+                              bool proxy) const;
 
   virtual void connectivity(const unsigned int sf,
                             const IOPackage iop,

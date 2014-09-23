@@ -127,7 +127,7 @@ public:
    * compatible with the output required for the requested \p type
    */
   static UniquePtr<FEGenericBase> build (const unsigned int dim,
-                                       const FEType& type);
+                                         const FEType& type);
 
   /**
    * Convenient typedefs for gradients of output, hessians of output,
@@ -155,7 +155,7 @@ public:
    * compatible with the output required for the requested \p type
    */
   static UniquePtr<FEGenericBase> build_InfFE (const unsigned int dim,
-                                             const FEType& type);
+                                               const FEType& type);
 
 #endif
 

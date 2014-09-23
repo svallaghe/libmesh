@@ -130,7 +130,7 @@ bool Prism15::has_affine_map() const
 
 
 UniquePtr<Elem> Prism15::build_side (const unsigned int i,
-                                   bool proxy) const
+                                     bool proxy) const
 {
   libmesh_assert_less (i, this->n_sides());
 

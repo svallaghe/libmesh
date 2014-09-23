@@ -105,7 +105,7 @@ bool InfHex16::is_node_on_edge(const unsigned int n,
 }
 
 UniquePtr<Elem> InfHex16::build_side (const unsigned int i,
-                                    bool proxy) const
+                                      bool proxy) const
 {
   libmesh_assert_less (i, this->n_sides());
 

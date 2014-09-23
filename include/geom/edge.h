@@ -139,7 +139,7 @@ public:
    * an auto pointer to a NodeElem for the specified node.
    */
   UniquePtr<Elem> build_side (const unsigned int i,
-                            bool proxy) const;
+                              bool proxy) const;
 
   /**
    * The \p Elem::build_edge() member makes no sense for edges.
