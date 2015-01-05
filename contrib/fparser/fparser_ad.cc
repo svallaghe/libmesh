@@ -18,6 +18,8 @@ using namespace FUNCTIONPARSERTYPES;
 #  include <sys/stat.h>
 #endif
 
+#define FPARSER_MAKE_STR(s) #s
+
 template<typename Value_t>
 FunctionParserADBase<Value_t>::FunctionParserADBase() :
     FunctionParserBase<Value_t>(),
@@ -1149,7 +1151,7 @@ bool FunctionParserADBase<Value_t>::JITCompileHelper(const std::string & Value_t
   }
 
   // run compiler
-  std::string command = FPARSER_JIT_COMPILER" -O2 -shared -rdynamic -fPIC ";
+  std::string command = FPARSER_MAKE_STR(FPARSER_JIT_COMPILER) " -O2 -shared -rdynamic -fPIC ";
   command += ccname_cc + " -o " + object;
   status = system(command.c_str());
   std::remove(ccname_cc.c_str());
